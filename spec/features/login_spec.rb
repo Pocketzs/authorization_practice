@@ -6,7 +6,7 @@ RSpec.describe "User Log In" do
 
     visit "/"
 
-    click_link "Log In"
+    click_link "Login"
 
     fill_in :email, with:'email@example.com'
     fill_in :password, with: 'password123'
@@ -21,7 +21,7 @@ RSpec.describe "User Log In" do
 
     visit "/"
 
-    click_link "Log In"
+    click_link "Login"
 
     fill_in :email, with:'email@example.com'
     fill_in :password, with: 'nottherightpassword'

@@ -1,7 +1,11 @@
-<%= button_to "Create New User", register_path, method: :get %>
-<section class='existing-users'>
-    <p>Existing Users: </p>
-    <% @users.each do |user| %>
-        <li><%= link_to user.email, user_path(user.id) %></li>
-    <% end %>
-</section>
+<% unless current_user %>
+  <%= button_to "Create New User", register_path, method: :get %> 
+<% end %>
+<% if current_user %>
+  <section class='existing-users'>
+      <p>Existing Users: </p>
+      <% @users.each do |user| %>
+          <%= user.email %>
+      <% end %>
+  </section>
+<% end %>
